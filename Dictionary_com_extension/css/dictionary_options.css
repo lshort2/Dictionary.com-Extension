@@ -1,0 +1,179 @@
+body{
+	background-image: url(../images/option-bg.png);
+	color:#000;
+	font-family:Helvetica;
+	font-size:13px;
+	margin:0px;
+}
+
+.dic_options{
+	background-color: #fff;
+	padding: 0 40px;
+	width:460px;
+}
+
+.dic_option_header{   
+   background-image: url(../images/options_header_bg.png);
+   background-repeat: repeat-x;
+   height: 47px;
+}
+
+.dic_option_header_logo{   
+   background-image: url(../images/options_logo.png);
+   height: 30px;
+   width:132px;
+   position: relative;
+   top: 10px;
+   left: 40px;
+}
+
+.dic_wrapper {
+	position: relative;
+	float: left;
+	left: 50%;
+	margin-top: 0;
+}
+
+.dic_opp_wrapper {
+	position: relative;
+	float: left;
+	left: -50%;
+	margin-bottom: 0;
+	background-color: #fff;
+	padding-bottom:20px;
+	box-shadow: 0 0 20px #333;
+	-webkit-box-shadow: 0 0 20px #333;
+	-webkit-border-radius: 8px 8px 8px 8px;
+	border-radius: 8px 8px 8px 8px;
+}
+
+.dic_option_title{
+	color:#0684cc;
+	font-size:20px;
+	margin:10px 0 5px;
+	font-weight:bold;
+}
+
+.dic_option_subtitle{
+	color:#000000;
+	font-size:14px;
+	margin:5px 0 5px;
+}
+
+.dic_option_seperator{
+	border-bottom:1px solid #DEDEDE;
+	height:0px;
+	margin:10px 0;
+	width:460px;
+	clear:both;
+}
+
+.dic_option_row{
+	clear:left;
+	
+}
+
+.dic_option_name{
+	float:left;
+	font-weight:bold;
+	margin-top:2px;
+	width:180px;	
+	font-size:14px;
+}
+
+.dic_option_value{
+	float:left;
+	padding-bottom:10px;
+}
+
+.dic_option_value_primary{
+	clear:left;	
+}
+
+.dic_option_value_secondary{
+	margin:5px 0 0px 35px;
+}
+
+
+a{
+	color:#11c;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+.sub_option_name{
+	float:left;	
+	margin-top:3px;
+	width:119px;	
+}
+
+.sub_option_value{
+	float:left;
+}
+
+.text_disabled{
+	color:#999;
+}
+
+.buttons{
+	clear:left;	
+	text-align:center;	
+}
+
+#save_status{
+	background-color:#fea;
+	font-weight:bold;
+	margin-left:10px;
+	display:none;
+	padding:3px;	
+}
+
+.footer{
+	margin-top:20px;
+	text-align:center;
+	clear:both;
+	
+}
+
+input[type="radio"] {
+	margin-left:0px !important;
+}
+
+div.dic-colorselector {
+	border: 1px solid #CCC;
+	background-color: #F8F8F8;
+	display: inline-block;
+	height: 14px;
+	margin-bottom: -5px;
+	padding: 2px;
+	width: 30px;
+	box-sizing: content-box;
+	float:left;
+	margin: 2px;
+}
+
+div.dic-colorselector-color {
+	background-color: white;
+	border: 1px solid #AAA;
+	height: 75%;
+	margin: 1px;
+	width: auto;
+	box-sizing: content-box;
+}
+
+#fontcolorpicker_holder, #bubblecolorpicker_holder{
+	height: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 32px;
+    width: 356px;
+}
+
+.dic_option_value_secondary span{
+	margin-right:12px;
+}
+

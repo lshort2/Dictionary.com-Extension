@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+	<title>Dictionary.com Extension Options</title>
+    <link rel="stylesheet" type="text/css" href="/css/dictionary_options.css">
+	<link rel="stylesheet" type="text/css" href="/css/colorpicker.css">	 
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/colorpicker.js"></script>
+	<script type="text/javascript" src="/js/dictionary_options.min.js"></script>
+</head>
+<body>	
+	<div class="dic_wrapper">
+		<div class="dic_opp_wrapper">
+			<div class="dic_option_header">		
+				<div class="dic_option_header_logo">&nbsp;</div>			
+			</div>
+			<div class="dic_options">
+			<div class="dic_option_title">Extension Options</div>
+			<div class="dic_option_subtitle" style="float:left;padding-right: 10px;">Like our extension? Be sure to let others know!</div>
+			<div style="float:left;position:relative;width:75px">						
+				<!-- Place this tag where you want the +1 button to render -->
+				<g:plusone size="medium" count="true" href='http://dictionary.com/' class="g-plusone"></g:plusone>
+			</div>
+			<div style="float:left;position:relative;width:75px">
+				<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdictionary.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
+			</div>
+			<div class="dic_option_seperator" style="margin-top:5px;">&nbsp;</div>				
+			<div class="dic_option_row">
+			   <div class="dic_option_name">Show Pop-Up:</div>
+				  <div class="dic_option_value">
+						<div class="dic_option_value_primary">
+						  <input type="checkbox" name="popup_dblclick_checkbox"
+								 id="popup_dblclick_checkbox">
+						  <label for="popup_dblclick_checkbox">
+							 When I double-click a word
+						  </label>
+						</div>
+						<div class="dic_option_value_secondary">
+						  <span id="popup_dblclick_text">Trigger key:</span>
+						  <select name="popup_dblclick_key" id="popup_dblclick_key">
+							<option value="none">None</option>
+							<option value="ctrl" >Ctrl</option>
+							<option value="alt">Alt</option>
+							<option value="shift">Shift</option>
+						  </select>
+						</div>
+						<div class="dic_option_value_primary" style="margin-top:10px;">
+						  <input type="checkbox" name="popup_select_checkbox"
+								 id="popup_select_checkbox">
+						  <label for="popup_select_checkbox">
+							 When I highlight a word or phrase
+						  </label>
+						</div>
+						<div class="dic_option_value_secondary">
+						  <span id="popup_select_text">Trigger key:</span>
+						  <select name="popup_select_key" id="popup_select_key">
+							<option value="none">None</option>
+							<option value="ctrl">Ctrl</option>
+							<option value="alt">Alt</option>
+							<option value="shift">Shift</option>
+						  </select>
+						</div>
+				  </div>
+			 </div>
+			<div class="dic_option_seperator">&nbsp;</div>	
+			<div class="dic_option_row">
+				  <div class="dic_option_name">Fill Pop-Up With:</div>
+				  <div class="dic_option_value">
+					<div class="dic_option_value_primary">
+						  <select id="defintion_selector">
+								<option id="d1" value="1">1</option>
+								<option id="d2" value="2">2</option>
+								<option id="d3" value="3">3</option>
+								<option id="d4" value="4">4</option>
+								<option id="d5" value="5">5</option>                               
+						  </select>
+						  <span id="popup_select_text">Definitions</span>
+					</div>				
+					<div class="dic_option_value_primary" style="margin-top:10px;">
+						  <input type="checkbox" name="synonyms_checkbox"
+								 id="synonyms_checkbox">
+						  <label for="synonyms_checkbox">
+							 Show Synonyms
+						  </label>
+					</div>						
+				  </div>
+				</div>
+				<div class="dic_option_seperator">&nbsp;</div>	
+				<div class="dic_option_row">
+				  <div class="dic_option_name">Position Pop-Up:</div>
+				  <div class="dic_option_value">
+					<div class="dic_option_value_primary">
+						<div style="float:left;">
+						<input id="direction" name="direction" type="radio"  value="above"> Above Word <br /><br />
+						<input id="direction" name="direction" type="radio"  value="below"> Below Word	
+						</div>
+						<div style="float:left;padding-left:27px;"><img id="position_img" src="../images/bubble_below.png"></div>
+					</div>			
+				  </div>
+			</div>
+			<div class="dic_option_seperator">&nbsp;</div>	
+			<div class="dic_option_row">
+				  <div class="dic_option_name">Customize Pop-Up:</div>
+				  <div class="dic_option_value">
+					<div class="dic_option_value_primary">
+						<div id="popup_select_text" class="sub_option_name">Font Type:</div>
+						<div class="sub_option_value">
+							<select id="fonttype_selector" name="fonttype_selector">
+								<option id="ft1" value="Arial">Arial</option>
+								<option id="ft2" value="sans-serif">Sans-Serif</option>
+								<option id="ft3" value="Helvetica">Helvetica</option>
+								<option id="ft4" value="Georgia">Georgia</option>
+								<option id="ft5" value="Verdana">Verdana</option>
+								<option id="ft6" value="&quot;Lucida Grande&quot;">Lucida Grande</option>
+								<option id="ft7" value="Palatino">Palatino</option>
+								<option id="ft8" value="&quot;Palatino Linotype&quot;">Palatino Linotype</option>
+							</select>
+						</div>
+					</div>
+					<div class="dic_option_value_primary">
+						<div id="popup_select_text" class="sub_option_name">Font Size:</div>
+						<div class="sub_option_value">
+							<select id="fontsize_selector" name="fontsize_selector">
+								<option id="fs1" value="11px">11pt</option>
+								<option id="fs2" value="12px">12pt</option>
+								<option id="fs3" value="13px">13pt</option>
+								<option id="fs4" value="14px">14pt</option>
+								<option id="fs5" value="15px">15pt</option>
+								<option id="fs6" value="16px">16pt</option>
+								<option id="fs7" value="17px">17pt</option>
+								<option id="fs8" value="18px">18pt</option>
+							</select>
+						</div>
+					</div>
+					<!-- 
+					<div class="dic_option_value_primary">
+						<div id="popup_select_text" class="sub_option_name">Font Color:</div>
+						<div class="sub_option_value">
+							<div class="dic-colorselector">
+								<div id="fontcolorpicker_selector" class="dic-colorselector-color"></div>
+							</div>
+							<div id="fontcolorpicker_holder"></div>
+						</div>
+					</div>
+					<div class="dic_option_value_primary">
+						<div id="popup_select_text" class="sub_option_name">Bubble Color:</div>
+						<div class="sub_option_value">
+							<div class="dic-colorselector">
+								<div id="bubblecolorpicker_selector" class="dic-colorselector-color"></div>
+							</div>
+							<div id="bubblecolorpicker_holder"></div>
+						</div>
+					</div>
+					-->
+				  </div>
+			</div>
+			<!--<div class="dic_option_seperator">&nbsp;</div>	
+			<div class="dic_option_row">
+				  <div class="dic_option_name">Search Results</div>
+				  <div class="dic_option_value">
+					<div class="dic_option_value_primary">
+						<input type="checkbox" name="search_checkbox"
+								 id="search_checkbox">
+						  <label for="search_checkbox">
+							 Show Dictionary.com Definitions
+						  </label>
+					</div>
+				</div>
+			</div>
+			-->
+			<div class="buttons" style="padding-top:30px;">
+				  <button id="save_button">Save</button>
+				  <button id="reset_button">Reset</button>
+				  <span id="save_status">Options saved</span>
+			</div>
+			</div>
+			<div class="footer">Copyright &copy; 2012 Dictionary.com, LLC. -
+				  <a href="http://dictionary.com/help/privacy.html">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://dictionary.com/help/terms.html">Terms of Use</a>
+			</div>	
+			
+			<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+			<!-- Add Feedbackify -->
+			<script type="text/javascript" src="/js/feedbackify/fby.js"></script>			
+			<script type="text/javascript">
+				FBY.showTab({id: '1425', position: 'right', color: '#4EA5DE'});
+			</script>			
+		</div>
+	</div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<title>Dictionary.com Extension Popup</title>
+    <link rel="stylesheet" type="text/css" href="/css/dictionary_popup.css">	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>	
+	<script type="text/javascript" src="/js/dictionary_popup.min.js"></script>
+	<script type="text/javascript">				
+			var dic_defintion_url = 'http://api-pub.dictionary.com/v001?'+
+				'vid=ng28jisldnjlcn83chxrq3kumjz2ije60hfjz84dvn'+
+				'&type=define&site=dictionary&q=';
+			var dic_synonyms_url = 'http://api-pub.dictionary.com/v001?'+
+				'vid=ng28jisldnjlcn83chxrq3kumjz2ije60hfjz84dvn'+
+				'&type=define&site=thesaurus&q=';
+			
+			localStorage.dic_defintion_url = dic_defintion_url;
+			localStorage.dic_synonyms_url = dic_synonyms_url;			
+			
+			chrome.extension.onRequest.addListener(onSelectionInfo);
+			chrome.tabs.executeScript(null, { file: "/js/dictionary.min.js" }); 
+			
+            function onSelectionInfo(o) {				
+                document.getElementById("dic-word").value = o.selectionText;
+				chrome.extension.onRequest.removeListener(window.onSelectionInfo);
+				
+				if(o.selectionText.length > 0){
+					getPopupDefinitions();
+				}				
+            } 
+		
+  
+	 </script>
+</head>
+<body>
+	<div class="dic_popup_header">
+		<a href="http://app.dictionary.com/click/9rfm88?clkdest=http://dictionary.com/" target="_blank"><div class="dic_popup_header_logo">&nbsp;</div></a>
+		<div id="dic-lookup-form">
+			<input type="text" id="dic-word" size="14" placeholder="Search"/>
+			<div id="dic-word-define-btn"></div>			
+		</div>
+	</div>
+	<div id="content">		
+		<div id="dic_tip">
+			Tip: Highlight a word on any web page then click the Dictionary logo to see the definition, or enter your word in the search box above.
+		</div>
+		<div id="dic_lookup_defintion">
+			
+		</div>
+		<div class="footer">
+			Copyright &copy; 2012 Dictionary.com, LLC.
+			<a href="#" align="right" id="dic_options">options</a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+  {
+  "name": "Dictionary.com Extension",
+  "version": "3.0.0.22",
+  "description": "Use Dictionary.com, the most popular and trusted online dictionary, to look up word definitions anywhere you go with Chrome.",	
+  "browser_action": {
+    "default_icon": "dictionary_Icon_16.png",
+    "default_title": "Use Dictionary.com, the most popular and trusted online dictionary, to look up word definitions anywhere you go with Chrome.",
+    "default_popup": "popup.html"
+  },
+ "icons" : {
+    "48" : "dictionary_Icon_48.png",
+    "128" : "dictionary_Icon_128.png"
+  },  
+  "permissions": [
+    "http://*/*",
+    "https://*/*",    
+    "contextMenus",
+    "tabs",
+    "tts"
+  ],
+ 
+  "background_page" : "background.html",
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*", "ftp://*/*"],
+      "css": ["/css/dictionary.css"],      
+      "js" : ["/js/jquery.min.js","/js/dictionary.min.js"],      
+      "all_frames":true
+    }
+  ],
+  "homepage_url": "http://dictionary.com",  
+  "options_page": "options.html",
+  "minimum_chrome_version":"15.0.874"
+}
